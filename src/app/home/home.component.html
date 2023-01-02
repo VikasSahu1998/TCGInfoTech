@@ -1,0 +1,9 @@
+<section cdkScrollable>
+  <div class="container-fluid">
+    <div class="row">
+      <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
+        <mat-icon>{{ mode }}</mat-icon>
+      </mat-slide-toggle>
+    </div>
+  </div>
+</section>
