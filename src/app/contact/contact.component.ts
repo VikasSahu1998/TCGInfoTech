@@ -1,8 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../shared/api.service';
 
 @Component({
@@ -28,7 +25,6 @@ export class ContactComponent implements OnInit{
   }
 
    adddetail() {
-  
       if (this.contactForm.valid) {
         this.api.PostContact(this.contactForm.value)
           .subscribe({
