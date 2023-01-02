@@ -99,6 +99,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "TCG-InfoTech:build:production",
+            "firebaseProject": "my-project-507f0",
+            "firebaseHostingSite": "my-project-507f0"
+          }
         }
       }
     }

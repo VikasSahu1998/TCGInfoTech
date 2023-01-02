@@ -1,8 +1,9 @@
 <section>
     <div class="container-fluid">
-        <form [formGroup]="contactForm" novalidate class="d-flex-center">
+        <form [formGroup]="contactForm" (ngSubmit)="adddetail()" novalidate class="d-flex-center">
             <mat-card class="example-card">
-                <mat-card-content>  <div class="example-container">
+                <mat-card-content>  
+                    <div class="example-container">
                     <div>
                         <!-- input type Name -->
                         <mat-form-field appearance="outline">
@@ -57,11 +58,11 @@
                         <!-- input type Name -->
                         <mat-form-field appearance="outline">
                             <mat-label>Your Subject</mat-label>
-                            <input matInput placeholder="John kerry" formControlName="name">
+                            <input matInput placeholder="John kerry" formControlName="subject">
                             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             
                             <mat-error
-                                *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched) && contactForm.get('name')?.errors?.required">
+                                *ngIf="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched) && contactForm.get('subject')?.errors?.required">
                                 Name is <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
@@ -71,11 +72,11 @@
                         <!-- input type Name -->
                         <mat-form-field appearance="outline">
                             <mat-label>Your Message</mat-label>
-                            <input matInput placeholder="John kerry" formControlName="name">
+                            <input matInput placeholder="John kerry" formControlName="msg">
                             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             
                             <mat-error
-                                *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched) && contactForm.get('name')?.errors?.required">
+                                *ngIf="contactForm.get('msg')?.invalid && (contactForm.get('msg')?.dirty || contactForm.get('msg')?.touched) && contactForm.get('msg')?.errors?.required">
                                 Name is <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
@@ -84,7 +85,7 @@
            
                     <!-- button Submit -->
                     <div >
-                        <button  mat-raised-button color="primary" mat-button>Submit</button>
+                        <button type="submit" (click)="adddetail()"  mat-raised-button color="primary" mat-button>Submit</button>
                     </div>
                 </div></mat-card-content>
               </mat-card>
