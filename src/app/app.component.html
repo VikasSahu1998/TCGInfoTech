@@ -3,10 +3,200 @@
     <app-header></app-header>
   </div>
   <span><br><br><br></span>
-  <div class="bg">
-    <router-outlet></router-outlet>
-  </div>
   <div>
-    <app-footer></app-footer>
+    <img
+      src="https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU="
+      class="img1">
+    <h1 class="midHeading">Hi, it's me Brad</h1><br><br>
+    <p class="midHeading1"> I am a professional freelancer in New York City</p>
+    <div class="container">
+
+      <div class="row pb-5">
+
+        <div class="col-lg-6">
+          <img
+            src="https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU=">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="center" align="center"><b>About Us</b></h1>Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an<br>
+          unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not<br>
+          only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged<br>
+
+          Name: Virendra<br>
+          Age: 35<br>
+          Occupation: HardWare Engineer TCG INFOTECH<br>
+
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+          a<br>
+          galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but<br>
+          also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the<br>
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and<br>
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into<br>
+          electronic typesetting, remaining essentially unchanged.<br>
+        </div>
+      </div>
+      <div>
+        <H1 ALIGN="CENTER"><B>Services</B></H1>
+        <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
+          <div class="col" *ngFor="let card of cards">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title">
+                  <h1>{{card.Title}}</h1>
+                </h2>
+                <p class="card-text">{{card.Description}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <H1 ALIGN="CENTER"><B>Portfolio</B></H1>
+        <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
+          <div class="col" *ngFor="let card1 of cards1">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <img src="{{card1.image}}" class="cardimg">
+                <h2 class="card-title">
+                  <h1>{{card1.Title}}</h1>
+                </h2>
+                <p class="card-text">{{card1.Description}}</p>
+                <button type="button" class="btn btn-primary ">Link</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+        <meta charset="utf-8">
+        <title>Customize the scroll-bar</title>
+
+        <style media="screen">
+          body {
+            background-image: linear-gradient(to right, dodgerblue, darkblue);
+          }
+        </style>
+      </head>
+
+      <h1>
+        TCG INFOTECH
+      </h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- Google Map Copied Code -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.795843850459!2d72.88733321483737!3d19.11661018706459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c6e7aa27e5%3A0x8d0373a03bdf690a!2sSun%20Srishti%20Complex!5e0!3m2!1sen!2sin!4v1672904393854!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-lg-6">
+         
+<section>
+  <div class="container-fluid">
+      <form [formGroup]="contactForm" (ngSubmit)="adddetail()" novalidate class="d-flex-center">
+          <mat-card class="example-card">
+              <mat-card-content>  
+                  <div class="example-container">
+                  <div>
+                      <!-- input type Name -->
+                      <mat-form-field appearance="outline">
+                          <mat-label>Your Full Name</mat-label>
+                          <input matInput placeholder="John kerry" formControlName="name">
+                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          
+                          <mat-error
+                              *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched) && contactForm.get('name')?.errors?.required">
+                              Name is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+                  </div>
+  
+                  <div> <!-- input type Number -->
+  
+                      <mat-form-field appearance="outline">
+                          <mat-label>Your Phone Number</mat-label>
+                          <span matPrefix>+91 &nbsp;</span>
+                          <input matInput placeholder="Phone Number" formControlName="PhoneNumber">
+                          <mat-icon matSuffix>call</mat-icon>
+          
+                          <mat-error
+                              *ngIf="!contactForm.get('PhoneNumber')?.errors?.required && (contactForm.get('PhoneNumber')?.errors?.pattern)">
+                              Please enter valid Number
+                          </mat-error>
+                          <mat-error
+                              *ngIf="contactForm.get('PhoneNumber')?.invalid && (contactForm.get('PhoneNumber')?.dirty || contactForm.get('PhoneNumber')?.touched) && contactForm.get('PhoneNumber')?.errors?.required">
+                              Phone number is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+                  </div>
+  
+                  <div>
+                      <!-- input type email -->
+                      <mat-form-field appearance="outline">
+                          <mat-label>Your E-Mail</mat-label>
+                          <input matInput placeholder="E-Mail" formControlName="email">
+                          <mat-icon matSuffix>alternate_email</mat-icon>
+                          <mat-error
+                              *ngIf="!contactForm.get('email')?.errors?.required && (contactForm.get('email')?.errors?.pattern)">
+                              Please enter a valid <strong>email address</strong>
+                          </mat-error>
+                          <mat-error
+                              *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched) && contactForm.get('email')?.errors?.required">
+                              Email is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+                  </div>
+  
+                  <div>
+                      <!-- input type Name -->
+                      <mat-form-field appearance="outline">
+                          <mat-label>Your Subject</mat-label>
+                          <input matInput placeholder="John kerry" formControlName="subject">
+                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          
+                          <mat-error
+                              *ngIf="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched) && contactForm.get('subject')?.errors?.required">
+                              Name is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+                  </div>
+  
+                  <div>
+                      <!-- input type Name -->
+                      <mat-form-field appearance="outline">
+                          <mat-label>Your Message</mat-label>
+                          <input matInput placeholder="John kerry" formControlName="msg">
+                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          
+                          <mat-error
+                              *ngIf="contactForm.get('msg')?.invalid && (contactForm.get('msg')?.dirty || contactForm.get('msg')?.touched) && contactForm.get('msg')?.errors?.required">
+                              Name is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+                  </div>
+                  <mat-divider></mat-divider>
+         
+                  <!-- button Submit -->
+                  <div >
+                      <button type="submit" (click)="adddetail()"  mat-raised-button color="primary" mat-button>Submit</button>
+                  </div>
+              </div></mat-card-content>
+            </mat-card>
+        
+      </form>
   </div>
-</div>
+</section>
+
+        </div>
+      </div>
+      <!-- <router-outlet></router-outlet> -->
+      <span><br><br><br><br><br></span>
+      <div>
+        <app-footer></app-footer>
+      </div>
