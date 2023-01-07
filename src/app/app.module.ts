@@ -10,12 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './shared/header/header.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactComponent } from './contact/contact.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -27,11 +24,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
-
     FooterComponent,
-    HomeComponent,
-    HeaderComponent,
-    ContactComponent
+
   ],
   imports: [
     BrowserModule,
