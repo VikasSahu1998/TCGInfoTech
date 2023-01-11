@@ -1,272 +1,311 @@
-<div class="container-fluid">
-  <div class="row">
-    
-      <mat-toolbar class="header" stickyHeaders="true">
-        <img src="\assets\tcg.png" class="tcglogo">
+<div>
+ 
+  <nav class="navbar navbar-expand-lg navbar-light ">
+   
+      <a class="navbar-brand" href="#"><img src="\assets\tcg.png"></a>
+      <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
         <span class="example-spacer"></span>
-        <button mat-button id="home"> <a href="#" style="text-decoration: none;">Home</a> </button>
-        <button mat-button><a href="#about" style="text-decoration: none;">About</a></button>
-        <button mat-button><a href="#contact" style=" text-decoration: none;">Contact</a></button>
-        <button mat-button><a href="#service" style=" text-decoration: none;">Services</a></button>
-        <button mat-button><a href="#Portfolio" style=" text-decoration: none;">Portfolio</a></button>
-        <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
-        <mat-icon>{{ mode }}</mat-icon>
-        </mat-slide-toggle>
-      </mat-toolbar>
+        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" id="home" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)">
+              <mat-icon>{{ mode }}</mat-icon>
+            </mat-slide-toggle>
+          </li>
 
-
-
-
-      <!-- <nav class="navbar  navbar-dark bg-dark navbar-expand-sm">
-        <img src="\assets\tcg.png" class="tcglogo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-list-2">
-          <span class="example-spacer"></span>
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Us</a>
-            </li>
-            <li class="nav-item">
-              <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
-                <mat-icon>{{ mode }}</mat-icon>
-              </mat-slide-toggle>
-            </li>
-          </ul>
-        </div>
-      </nav> -->
-  </div>
+        </ul>
+      </div>
+    
+  </nav>
 </div>
 
-<span><br></span>
-<div class="container-fluid">
-  <div>
-    <img
-      src="https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU="
-      class="img1">
-    <h1 class="midHeading">Hi, it's me Brad</h1><br><br>
-    <p class="midHeading1"> I am a professional freelancer in New York City</p>
-
-    <div class="container">
-
-      <div class="row pb-5">
-
-        <div class="col-lg-6">
-          <img src="\assets\7309681.png" class="img2">
-        </div>
-
-        <div class="col-lg-6" *ngFor="let paragraph of AboutPage">
-          <div class="center">
-            <h1 align="center" id="about">{{paragraph.Title}}</h1>
-          </div>
-          <div class="center">
-            <h3 align="left">{{paragraph.Description}}</h3>
-          </div>
-          <div class="center">
-            <h3 align="left">{{paragraph.Description1}}</h3>
-          </div>
-          <div class="center">
-            <h3 align="left">{{paragraph.Description2}}</h3>
-          </div>
-          <div class="center">
-            <h3 align="left">{{paragraph.Description3}}</h3>
-          </div>
-          <div class="center">
-            <h3 align="left">{{paragraph.Description4}}</h3>
-          </div>
-
-        </div>
-      </div>
-      <div>
-        <H1 ALIGN="CENTER"><B id="service">Services</B></H1>
-        <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
-          <div class="col" *ngFor="let card of cards">
-            <mat-card class="card h-100">
-              <div class="card-body">
-                <h2 class="card-title">
-                  <mat-card-content>
-                    <h1>{{card.Title}}</h1>
-                  </mat-card-content>
-                </h2>
-                <p class="card-text">{{card.Description}}</p>
-              </div>
-            </mat-card>
-          </div>
-        </div>
-      </div>
+<!-- <mat-toolbar class="header" stickyHeaders="true">
+  <img src="\assets\tcg.png" class="tcglogo">
+  <span class="example-spacer"></span>
+  <button mat-button id="home"> <a href="#" style="text-decoration: none;">Home</a> </button>
+  <button mat-button><a href="#about" style="text-decoration: none;">About</a></button>
+  <button mat-button><a href="#contact" style=" text-decoration: none;">Contact</a></button>
+  <button mat-button><a href="#service" style=" text-decoration: none;">Services</a></button>
+  <button mat-button><a href="#Portfolio" style=" text-decoration: none;">Portfolio</a></button>
+  <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
+    <mat-icon>{{ mode }}</mat-icon>
+  </mat-slide-toggle>
+</mat-toolbar> -->
 
 
-      <div>
-        <H1 ALIGN="CENTER"><B id="Portfolio">Portfolio</B></H1>
-        <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
-          <div class="col" *ngFor="let card1 of cards1">
-            <div class="card h-100 text-center">
-              <mat-card class="card-body">
-                <img src="{{card1.image}}" class="cardimg">
-                <h2 class="card-title">
-                  <h1>{{card1.Title}}</h1>
-                </h2>
-                <p class="card-text">{{card1.Description}}</p>
-                <button type="button" mat-button mat-raised-button color="primary">Link</button>
-              </mat-card>
-            </div>
-          </div>
 
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6">
-          <!-- Google Map Copied Code -->
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.795843850459!2d72.88733321483737!3d19.11661018706459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c6e7aa27e5%3A0x8d0373a03bdf690a!2sSun%20Srishti%20Complex!5e0!3m2!1sen!2sin!4v1672904393854!5m2!1sen!2sin"
-            width="600" height="540vh" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="col-lg-4">
-
-          <section>
-            <div class="container-fluid">
-              <form [formGroup]="contactForm" (ngSubmit)="adddetail()" novalidate class="d-flex-center">
-                <mat-card class="example-card">
-                  <mat-card-header>
-                    <mat-card-title id="contact">Contact Us</mat-card-title>
-
-                  </mat-card-header>
-                  <span><br></span>
-                  <mat-card-content>
-                    <div class="example-container">
-                      <div>
-                        <!-- input type Name -->
-                        <mat-form-field appearance="outline">
-                          <mat-label>Your Full Name</mat-label>
-                          <input matInput placeholder="John kerry" formControlName="name">
-                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-
-                          <mat-error
-                            *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched) && contactForm.get('name')?.errors?.required">
-                            Name is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      </div>
-
-                      <div> <!-- input type Number -->
-
-                        <mat-form-field appearance="outline">
-                          <mat-label>Your Phone Number</mat-label>
-                          <span matPrefix>+91 &nbsp;</span>
-                          <input matInput placeholder="Phone Number" formControlName="PhoneNumber">
-                          <mat-icon matSuffix>call</mat-icon>
-
-                          <mat-error
-                            *ngIf="!contactForm.get('PhoneNumber')?.errors?.required && (contactForm.get('PhoneNumber')?.errors?.pattern)">
-                            Please enter valid Number
-                          </mat-error>
-                          <mat-error
-                            *ngIf="contactForm.get('PhoneNumber')?.invalid && (contactForm.get('PhoneNumber')?.dirty || contactForm.get('PhoneNumber')?.touched) && contactForm.get('PhoneNumber')?.errors?.required">
-                            Phone number is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      </div>
-
-                      <div>
-                        <!-- input type email -->
-                        <mat-form-field appearance="outline">
-                          <mat-label>Your E-Mail</mat-label>
-                          <input matInput placeholder="E-Mail" formControlName="email">
-                          <mat-icon matSuffix>alternate_email</mat-icon>
-                          <mat-error
-                            *ngIf="!contactForm.get('email')?.errors?.required && (contactForm.get('email')?.errors?.pattern)">
-                            Please enter a valid <strong>email address</strong>
-                          </mat-error>
-                          <mat-error
-                            *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched) && contactForm.get('email')?.errors?.required">
-                            Email is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      </div>
-
-                      <div>
-                        <!-- input type Name -->
-                        <mat-form-field appearance="outline">
-                          <mat-label>Your Subject</mat-label>
-                          <input matInput placeholder="John kerry" formControlName="subject">
-                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-
-                          <mat-error
-                            *ngIf="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched) && contactForm.get('subject')?.errors?.required">
-                            Name is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      </div>
-
-                      <div>
-                        <!-- input type Name -->
-                        <mat-form-field appearance="outline">
-                          <mat-label>Your Message</mat-label>
-                          <input matInput placeholder="John kerry" formControlName="msg">
-                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-
-                          <mat-error
-                            *ngIf="contactForm.get('msg')?.invalid && (contactForm.get('msg')?.dirty || contactForm.get('msg')?.touched) && contactForm.get('msg')?.errors?.required">
-                            Name is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      </div>
-                      <mat-divider></mat-divider>
-
-                      <!-- button Submit -->
-                      <div align="CENTER">
-                        <br>
-                        <button type="submit" (click)="adddetail()" mat-raised-button color="primary"
-                          mat-button>Submit</button>
-                      </div>
-                    </div>
-                  </mat-card-content>
-                </mat-card>
-
-              </form>
-            </div>
-          </section>
-
-        </div>
-
-        <div class="col-lg-2" style="margin-top: 5%;">
-          <div class="vertical"></div>
-          <div style="margin-left:20px ; margin-top: 70px;">
-            <h2>Address-: </h2>Sun Srishti Complex
-            4V8Q+JRR, Saki Vihar Rd, opp. Gurukrupa hotel, Tunga Village, Chandivali, Powai, Mumbai, Maharashtra
-            400072<br>
-            <h2>email-:</h2>tcginfotech@gmail.com<br>
-            <h2>Mobile No. -:</h2>123456789
-          </div>
-
-        </div>
-      </div>
-      <div align="end">
-        <button mat-mini-fab color="primary"><a href="#home" style="color:whitesmoke; "><mat-icon
-              id="home">arrow_upward</mat-icon></a></button>
-      </div>
-      <!-- <router-outlet></router-outlet> -->
-      <span><br><br><br><br><br></span>
-
+<!-- <nav class="navbar  navbar-dark bg-dark navbar-expand-sm">
+    <img src="\assets\tcg.png" class="tcglogo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-list-2">
+      <span class="example-spacer"></span>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
+            <mat-icon>{{ mode }}</mat-icon>
+          </mat-slide-toggle>
+        </li>
+      </ul>
     </div>
+  </nav> -->
+
+<div class="container-fluid">
+
+<span><br></span>
+
+<div class="row">
+<div class="col">
+  <img
+    src="https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU="
+    class="img1">
+  <h1 class="midHeading">Hi, it's me Brad</h1><br><br>
+  <p class="midHeading1"> I am a professional freelancer in New York City</p>
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+
+  <div class="col-lg-6">
+    <img src="\assets\7309681.png" width="85%" height="70%" class="img2">
+  </div>
+
+  <div class="col-lg-6" *ngFor="let paragraph of AboutPage">
+    <div class="center">
+      <h1 align="center" id="about">{{paragraph.Title}}</h1>
+    </div>
+    <div class="center">
+      <h3 align="left">{{paragraph.Description}}</h3>
+    </div>
+    <div class="center">
+      <h3 align="left">{{paragraph.Description1}}</h3>
+    </div>
+    <div class="center">
+      <h3 align="left">{{paragraph.Description2}}</h3>
+    </div>
+    <div class="center">
+      <h3 align="left">{{paragraph.Description3}}</h3>
+    </div>
+    <div class="center">
+      <h3 align="left">{{paragraph.Description4}}</h3>
+    </div>
+
   </div>
 </div>
 <div>
-  <app-footer></app-footer>
+  <H1 ALIGN="CENTER"><B id="service">Services</B></H1>
+  <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
+    <div class="col" *ngFor="let card of cards">
+      <mat-card class="card h-100">
+        <div class="card-body">
+          <h2 class="card-title">
+            <mat-card-content>
+              <h1>{{card.Title}}</h1>
+            </mat-card-content>
+          </h2>
+          <p class="card-text">{{card.Description}}</p>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <H1 ALIGN="CENTER"><B id="Portfolio">Portfolio</B></H1>
+  <div class="row row-cols-1 row-cols-md-3 g-4  pb-5">
+    <div class="col" *ngFor="let card1 of cards1">
+      <div class="card h-100 text-center">
+        <mat-card class="card-body">
+          <img src="{{card1.image}}" class="cardimg">
+          <h2 class="card-title">
+            <h1>{{card1.Title}}</h1>
+          </h2>
+          <p class="card-text">{{card1.Description}}</p>
+          <button type="button" mat-button mat-raised-button color="primary">Link</button>
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <!-- Google Map Copied Code -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.795843850459!2d72.88733321483737!3d19.11661018706459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c6e7aa27e5%3A0x8d0373a03bdf690a!2sSun%20Srishti%20Complex!5e0!3m2!1sen!2sin!4v1672904393854!5m2!1sen!2sin"
+      width="100%" height="100% " style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="col-lg-4">
+
+    <section>
+      <div class="container-fluid">
+        <form [formGroup]="contactForm" (ngSubmit)="adddetail()" novalidate class="d-flex-center">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title id="contact">Contact Us</mat-card-title>
+
+            </mat-card-header>
+            <span><br></span>
+            <mat-card-content>
+              <div class="example-container">
+                <div>
+                  <!-- input type Name -->
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your Full Name</mat-label>
+                    <input matInput placeholder="John kerry" formControlName="name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                    <mat-error
+                      *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched) && contactForm.get('name')?.errors?.required">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div> <!-- input type Number -->
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your Phone Number</mat-label>
+                    <span matPrefix>+91 &nbsp;</span>
+                    <input matInput placeholder="Phone Number" formControlName="PhoneNumber">
+                    <mat-icon matSuffix>call</mat-icon>
+
+                    <mat-error
+                      *ngIf="!contactForm.get('PhoneNumber')?.errors?.required && (contactForm.get('PhoneNumber')?.errors?.pattern)">
+                      Please enter valid Number
+                    </mat-error>
+                    <mat-error
+                      *ngIf="contactForm.get('PhoneNumber')?.invalid && (contactForm.get('PhoneNumber')?.dirty || contactForm.get('PhoneNumber')?.touched) && contactForm.get('PhoneNumber')?.errors?.required">
+                      Phone number is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div>
+                  <!-- input type email -->
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your E-Mail</mat-label>
+                    <input matInput placeholder="E-Mail" formControlName="email">
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                    <mat-error
+                      *ngIf="!contactForm.get('email')?.errors?.required && (contactForm.get('email')?.errors?.pattern)">
+                      Please enter a valid <strong>email address</strong>
+                    </mat-error>
+                    <mat-error
+                      *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched) && contactForm.get('email')?.errors?.required">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div>
+                  <!-- input type Name -->
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your Subject</mat-label>
+                    <input matInput placeholder="John kerry" formControlName="subject">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                    <mat-error
+                      *ngIf="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched) && contactForm.get('subject')?.errors?.required">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div>
+                  <!-- input type Name -->
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your Message</mat-label>
+                    <input matInput placeholder="John kerry" formControlName="msg">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                    <mat-error
+                      *ngIf="contactForm.get('msg')?.invalid && (contactForm.get('msg')?.dirty || contactForm.get('msg')?.touched) && contactForm.get('msg')?.errors?.required">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <mat-divider></mat-divider>
+
+                <!-- button Submit -->
+                <div align="CENTER">
+                  <br>
+                  <button type="submit" (click)="adddetail()" mat-raised-button color="primary"
+                    mat-button>Submit</button>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="col-lg-2" style="margin-top: 5%;">
+    <div class="vertical"></div>
+    <div style="margin-left:20px ; margin-top: 70px;">
+      <h2>Address-: </h2>Sun Srishti Complex
+      4V8Q+JRR, Saki Vihar Rd, opp. Gurukrupa hotel, Tunga Village, Chandivali, Powai, Mumbai, Maharashtra
+      400072<br>
+      mailto:<h2>email-:</h2>tcginfotech@gmail.com<br>
+      <h2>Mobile No. -:</h2>123456789
+    </div>
+
+  </div>
+</div>
+<div align="end">
+  <button mat-mini-fab color="primary"><a href="#home" style="color:whitesmoke; "><mat-icon
+        id="home">arrow_upward</mat-icon></a></button>
+</div>
+<!-- <router-outlet></router-outlet> -->
+<span><br><br><br><br><br></span>
+
+</div>
+
+</div>
+<div>
+<app-footer></app-footer>
 </div>
