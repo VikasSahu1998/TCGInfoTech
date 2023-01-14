@@ -6,26 +6,39 @@
 .img1 {
   width: 100%;
   height: 600px;
+
 }
 
+.banner {
+
+  // background-image: url("https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU=");
+
+  padding: 200px 0;
+  background: linear-gradient(rgb(0, 0, 0, .5), rgb(16, 16, 17)), url("https://media.istockphoto.com/id/1066995748/photo/repair-of-computer-hard-drives.jpg?s=612x612&w=0&k=20&c=LxlSulxNxVR5aeYLGBoilDFF59jt355j2GkYr4MTQPU=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  background-attachment: fixed;
+  text-align: center;
+}
 
 .midHeading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  // position: absolute;
+  // top: 40%;
+
+
+  color: whitesmoke;
   font-size: 50px;
+
 }
 
 .midHeading1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+
   color: whitesmoke;
   font-size: 20px;
-  padding-bottom: 10px;
+
 }
 
 .cardimg {
@@ -57,7 +70,7 @@ mat-card-header {
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
-  
+
 }
 
 .example-spacer {
@@ -70,18 +83,26 @@ mat-card-header {
 
 .navbar-brand img {
   width: 50%;
-  
+
 
 }
 
 
 .vertical {
-  margin-top: 3%;
   border-left: 3px solid black;
-  height: 350px;
+  height: 55.5vh;
   position: absolute;
 
 }
+
+
+@media only screen and (max-width: 400px ) {
+  img2 {
+    max-width: 50%;
+    max-height: 50%;
+  }
+}
+
 
 .card {
   transition: 1s ease;
@@ -94,17 +115,60 @@ mat-card-header {
   transition: 1s;
 
 }
+
 .navbar .navbar-brand {
   font-size: 30px;
 }
+
 .navbar .nav-item {
   padding: 10px 20px;
 }
+
 .navbar .nav-link {
   font-size: 20px;
   margin-left: 10px;
 }
+
 .fa-bars {
   color: #007bff;
   font-size: 30px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+
+.navbar-nav a:hover::before {
+  transform: scale3d(1, 1, 1);
+}
+
+.navbar-nav a::before {
+  transform-origin: 50% 50%;
+  background: #F06292;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar-nav a {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+  display: block;
+  position: relative;
+  padding: 4px 0;
+}
+
+.navbar-nav a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgb(53, 61, 175);
+  transition: 0.5s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0 50%;
 }
